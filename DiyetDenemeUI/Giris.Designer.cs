@@ -1,6 +1,6 @@
 ﻿namespace DiyetDenemeUI
 {
-    partial class Form1
+    partial class Giris
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Giris));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -54,7 +54,7 @@
             // 
             pictureBox1.BackColor = Color.Transparent;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(243, 2);
+            pictureBox1.Location = new Point(240, -33);
             pictureBox1.Margin = new Padding(2, 1, 2, 1);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(500, 500);
@@ -155,7 +155,7 @@
             guna2GradientPanel1.Size = new Size(703, 455);
             guna2GradientPanel1.TabIndex = 6;
             // 
-            // Form1
+            // Giris
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -165,7 +165,7 @@
             Controls.Add(txtSifreLogin);
             Controls.Add(txtKullaniciAdiLogin);
             Controls.Add(guna2GradientPanel1);
-            Name = "Form1";
+            Name = "Giris";
             Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             guna2GradientPanel1.ResumeLayout(false);

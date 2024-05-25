@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace DenemeDiyetDAL.Migrations
 {
-    public partial class iki : Migration
+    public partial class ilk : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -32,11 +32,11 @@ namespace DenemeDiyetDAL.Migrations
                     KullaniciSoyadi = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     KullaniciSifre = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     DogumTarihi = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    TelefonNumarasi = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Cinsiyet = table.Column<bool>(type: "bit", nullable: false),
+                    TelefonNumarasi = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Cinsiyet = table.Column<bool>(type: "bit", nullable: true),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    GuvenlikSorusu = table.Column<int>(type: "int", nullable: false),
-                    GuvenlikSorusuCevap = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    GuvenlikSorusu = table.Column<int>(type: "int", nullable: true),
+                    GuvenlikSorusuCevap = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Boy = table.Column<double>(type: "float", nullable: false),
                     Kilo = table.Column<double>(type: "float", nullable: false)
                 },

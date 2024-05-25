@@ -10,7 +10,7 @@
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// <param /*name="disposing"*/>true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -45,6 +45,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             pictureBox1 = new PictureBox();
             rdbKadin = new Guna.UI2.WinForms.Guna2RadioButton();
@@ -55,7 +57,8 @@
             txtAd = new Guna.UI2.WinForms.Guna2TextBox();
             s = new Guna.UI2.WinForms.Guna2Button();
             txtSifre = new Guna.UI2.WinForms.Guna2TextBox();
-            txtKullaniciAdi = new Guna.UI2.WinForms.Guna2TextBox();
+            txtSoyad = new Guna.UI2.WinForms.Guna2TextBox();
+            txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
             guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -94,7 +97,7 @@
             rdbKadin.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
             rdbKadin.CheckedState.InnerColor = Color.White;
             rdbKadin.CheckedState.InnerOffset = -4;
-            rdbKadin.Location = new Point(618, 242);
+            rdbKadin.Location = new Point(617, 282);
             rdbKadin.Margin = new Padding(2, 1, 2, 1);
             rdbKadin.Name = "rdbKadin";
             rdbKadin.Size = new Size(55, 19);
@@ -113,7 +116,7 @@
             rdbErkek.CheckedState.FillColor = Color.FromArgb(94, 148, 255);
             rdbErkek.CheckedState.InnerColor = Color.White;
             rdbErkek.CheckedState.InnerOffset = -4;
-            rdbErkek.Location = new Point(478, 242);
+            rdbErkek.Location = new Point(477, 282);
             rdbErkek.Margin = new Padding(2, 1, 2, 1);
             rdbErkek.Name = "rdbErkek";
             rdbErkek.Size = new Size(53, 19);
@@ -132,7 +135,7 @@
             dtmDogumTarihi.FillColor = Color.White;
             dtmDogumTarihi.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             dtmDogumTarihi.Format = DateTimePickerFormat.Long;
-            dtmDogumTarihi.Location = new Point(478, 200);
+            dtmDogumTarihi.Location = new Point(477, 240);
             dtmDogumTarihi.Margin = new Padding(2, 1, 2, 1);
             dtmDogumTarihi.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             dtmDogumTarihi.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
@@ -154,7 +157,7 @@
             txtKilo.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtKilo.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             txtKilo.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtKilo.Location = new Point(478, 165);
+            txtKilo.Location = new Point(477, 205);
             txtKilo.Name = "txtKilo";
             txtKilo.PasswordChar = '\0';
             txtKilo.PlaceholderText = "Kilonuz";
@@ -175,7 +178,7 @@
             txtBoy.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtBoy.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             txtBoy.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtBoy.Location = new Point(478, 128);
+            txtBoy.Location = new Point(477, 168);
             txtBoy.Name = "txtBoy";
             txtBoy.PasswordChar = '\0';
             txtBoy.PlaceholderText = "Boyunuz";
@@ -196,7 +199,7 @@
             txtAd.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtAd.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             txtAd.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtAd.Location = new Point(478, 92);
+            txtAd.Location = new Point(477, 96);
             txtAd.Name = "txtAd";
             txtAd.PasswordChar = '\0';
             txtAd.PlaceholderText = "Adiniz";
@@ -215,7 +218,7 @@
             s.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             s.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             s.ForeColor = Color.White;
-            s.Location = new Point(467, 279);
+            s.Location = new Point(466, 319);
             s.Margin = new Padding(2, 1, 2, 1);
             s.Name = "s";
             s.ShadowDecoration.CustomizableEdges = customizableEdges12;
@@ -236,7 +239,7 @@
             txtSifre.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtSifre.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             txtSifre.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtSifre.Location = new Point(478, 55);
+            txtSifre.Location = new Point(477, 59);
             txtSifre.Name = "txtSifre";
             txtSifre.PasswordChar = '\0';
             txtSifre.PlaceholderText = "Sifre";
@@ -245,26 +248,47 @@
             txtSifre.Size = new Size(195, 31);
             txtSifre.TabIndex = 19;
             // 
-            // txtKullaniciAdi
+            // txtSoyad
             // 
-            txtKullaniciAdi.BorderRadius = 30;
-            txtKullaniciAdi.CustomizableEdges = customizableEdges15;
-            txtKullaniciAdi.DefaultText = "";
-            txtKullaniciAdi.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtKullaniciAdi.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtKullaniciAdi.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtKullaniciAdi.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtKullaniciAdi.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtKullaniciAdi.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            txtKullaniciAdi.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtKullaniciAdi.Location = new Point(478, 19);
-            txtKullaniciAdi.Name = "txtKullaniciAdi";
-            txtKullaniciAdi.PasswordChar = '\0';
-            txtKullaniciAdi.PlaceholderText = "Kullanici Adi";
-            txtKullaniciAdi.SelectedText = "";
-            txtKullaniciAdi.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            txtKullaniciAdi.Size = new Size(195, 31);
-            txtKullaniciAdi.TabIndex = 18;
+            txtSoyad.BorderRadius = 30;
+            txtSoyad.CustomizableEdges = customizableEdges15;
+            txtSoyad.DefaultText = "";
+            txtSoyad.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtSoyad.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtSoyad.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtSoyad.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtSoyad.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtSoyad.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtSoyad.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtSoyad.Location = new Point(477, 131);
+            txtSoyad.Name = "txtSoyad";
+            txtSoyad.PasswordChar = '\0';
+            txtSoyad.PlaceholderText = "Soyadı";
+            txtSoyad.SelectedText = "";
+            txtSoyad.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            txtSoyad.Size = new Size(195, 31);
+            txtSoyad.TabIndex = 18;
+            // 
+            // txtEmail
+            // 
+            txtEmail.BorderRadius = 30;
+            txtEmail.CustomizableEdges = customizableEdges17;
+            txtEmail.DefaultText = "";
+            txtEmail.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtEmail.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtEmail.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtEmail.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtEmail.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtEmail.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtEmail.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtEmail.Location = new Point(477, 22);
+            txtEmail.Name = "txtEmail";
+            txtEmail.PasswordChar = '\0';
+            txtEmail.PlaceholderText = "E-mail";
+            txtEmail.SelectedText = "";
+            txtEmail.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            txtEmail.Size = new Size(195, 31);
+            txtEmail.TabIndex = 18;
             // 
             // KayitOl
             // 
@@ -279,7 +303,8 @@
             Controls.Add(txtAd);
             Controls.Add(s);
             Controls.Add(txtSifre);
-            Controls.Add(txtKullaniciAdi);
+            Controls.Add(txtEmail);
+            Controls.Add(txtSoyad);
             Controls.Add(guna2GradientPanel1);
             Name = "KayitOl";
             Text = "KayitOl";
@@ -302,6 +327,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txtAd;
         private Guna.UI2.WinForms.Guna2Button s;
         private Guna.UI2.WinForms.Guna2TextBox txtSifre;
-        private Guna.UI2.WinForms.Guna2TextBox txtKullaniciAdi;
+        private Guna.UI2.WinForms.Guna2TextBox txtSoyad;
+        private Guna.UI2.WinForms.Guna2TextBox txtEmail;
     }
 }

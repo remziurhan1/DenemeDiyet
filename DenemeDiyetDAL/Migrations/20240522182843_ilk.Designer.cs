@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DenemeDiyetDAL.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240521202127_iki")]
-    partial class iki
+    [Migration("20240522182843_ilk")]
+    partial class ilk
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -71,7 +71,7 @@ namespace DenemeDiyetDAL.Migrations
                     b.Property<double>("Boy")
                         .HasColumnType("float");
 
-                    b.Property<bool>("Cinsiyet")
+                    b.Property<bool?>("Cinsiyet")
                         .HasColumnType("bit");
 
                     b.Property<DateTime>("DogumTarihi")
@@ -81,11 +81,10 @@ namespace DenemeDiyetDAL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("GuvenlikSorusu")
+                    b.Property<int?>("GuvenlikSorusu")
                         .HasColumnType("int");
 
                     b.Property<string>("GuvenlikSorusuCevap")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<double>("Kilo")
@@ -104,7 +103,6 @@ namespace DenemeDiyetDAL.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("TelefonNumarasi")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("KullaniciID");

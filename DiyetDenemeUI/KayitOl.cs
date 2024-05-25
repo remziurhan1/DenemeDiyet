@@ -1,4 +1,5 @@
 ﻿using DenemeDiyetDAL;
+using DenemeDiyetDAL.Repository;
 using DiyetDenemeDATA.TemelOgeler;
 using System;
 using System.Collections.Generic;
@@ -19,27 +20,23 @@ namespace DiyetDenemeUI
         {
             InitializeComponent();
         }
-
+        UserRepository userRepository = new UserRepository();
 
 
         private void s_Click(object sender, EventArgs e)
         {
-            AppDbContext context;
-            using (context = new AppDbContext()) 
-            {
-                User user = new User()
-                {
-                    Email=txtKullaniciAdi.Text,
-                    KullaniciSifre=txtSifre.Text,
-                    KullaniciAdi=txtAd.Text,
-                    Boy=Convert.ToDouble(txtBoy.Text),
-                    Kilo=Convert.ToDouble(txtKilo.Text),
-                    DogumTarihi=dtmDogumTarihi.Value
-                };
+            User user = new User();
+            user.Email=txtEmail.Text;
+            user.KullaniciSifre=txtSifre.Text;
+            user.KullaniciAdi=txtAd.Text;
+            user.KullaniciSoyadi=txtSoyad.Text;
+            user.Boy = Convert.ToDouble(txtBoy.Text);
+            user.Kilo = Convert.ToDouble(txtKilo.Text);
+            user.DogumTarihi = dtmDogumTarihi.Value;
 
-                context.Users.Add(user);
-                context.SaveChanges();
-            }
+            userRepository.Add(user);        
+
+
         }
     }
 }

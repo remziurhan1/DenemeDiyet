@@ -13,16 +13,16 @@ namespace DenemeDiyetDAL.Mappings
     {
         public void Configure(EntityTypeBuilder<User> builder)
         {
-            builder.Property(x=> x.KullaniciAdi).IsRequired().HasMaxLength(20);
-            builder.Property(x=>x.KullaniciSoyadi).IsRequired().HasMaxLength(20);
-            builder.Property(x=>x.KullaniciSifre).IsRequired().HasMaxLength(15);
-            builder.Property(x => x.DogumTarihi).IsRequired();
-            builder.Property(x => x.Email).IsRequired().HasMaxLength(100);
+            builder.Property(x=> x.KullaniciAdi).HasMaxLength(20);
+            builder.Property(x=>x.KullaniciSoyadi).HasMaxLength(20);
+            builder.Property(x=>x.KullaniciSifre).HasMaxLength(15);
+            builder.Property(x => x.DogumTarihi);
+            builder.Property(x => x.Email).HasMaxLength(100);
             builder.HasIndex(x => x.Email).IsUnique();
-            builder.Property(x => x.TelefonNumarasi).IsRequired().HasMaxLength(10);
-            builder.Property(x => x.Boy).IsRequired().HasMaxLength(5);
-            builder.Property(x => x.Kilo).IsRequired().HasMaxLength(5);
-            builder.Property(x => x.GuvenlikSorusuCevap).IsRequired().HasMaxLength(50);
+            builder.Property(x => x.TelefonNumarasi).HasMaxLength(10);
+            builder.Property(x => x.Boy).HasMaxLength(5);
+            builder.Property(x => x.Kilo).HasMaxLength(5);
+            //builder.Property(x => x.GuvenlikSorusuCevap).HasMaxLength(50);
 
         }
     }

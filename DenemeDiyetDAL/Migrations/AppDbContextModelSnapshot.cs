@@ -69,7 +69,7 @@ namespace DenemeDiyetDAL.Migrations
                     b.Property<double>("Boy")
                         .HasColumnType("float");
 
-                    b.Property<bool>("Cinsiyet")
+                    b.Property<bool?>("Cinsiyet")
                         .HasColumnType("bit");
 
                     b.Property<DateTime>("DogumTarihi")
@@ -79,11 +79,10 @@ namespace DenemeDiyetDAL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("GuvenlikSorusu")
+                    b.Property<int?>("GuvenlikSorusu")
                         .HasColumnType("int");
 
                     b.Property<string>("GuvenlikSorusuCevap")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<double>("Kilo")
@@ -102,7 +101,6 @@ namespace DenemeDiyetDAL.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("TelefonNumarasi")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("KullaniciID");
